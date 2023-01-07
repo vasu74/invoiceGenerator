@@ -65,10 +65,14 @@ const InvoiceForm = () => {
 
   const taxRateChangeHandler = (event) => {
     dispatch(itemActions.taxRateChange(event.target.value));
+    dispatch(itemActions.handleCalculateTotal());
+    console.log(cart.taxRate);
+    console.log(event.target.value);
   };
 
   const discountRateChangeHandler = (event) => {
     dispatch(itemActions.discountRateChange(event.target.value));
+    dispatch(itemActions.handleCalculateTotal());
   };
 
   const openModalHandler = (event) => {

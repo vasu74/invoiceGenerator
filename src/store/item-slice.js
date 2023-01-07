@@ -99,13 +99,13 @@ const ItemSlice = createSlice({
       state.currency = action.payload;
     },
     taxRateChange(state, action) {
-      state.taxRate = action.taxRate;
+      state.taxRate = action.payload;
     },
     discountRateChange(state, action) {
-      state.discountRate = action.discountRate;
+      state.discountRate = action.payload;
     },
 
-    openModal(state, action) {
+    openModal(state) {
       state.isOpen = !state.isOpen;
     },
   },
